@@ -2,8 +2,8 @@ import LinkedListNode from './LinkedListNode';
 import Comparator from '../../utils/comparator/Comparator';
 
 export default class LinkedList {
-  /**
-   * @param {Function} [comparatorFunction]
+  /** // JSDoc: a markup language used to document JavaScript code.
+   * @param {Function} [comparatorFunction] // takes a comparator function
    */
   constructor(comparatorFunction) {
     /** @var LinkedListNode */
@@ -12,12 +12,12 @@ export default class LinkedList {
     /** @var LinkedListNode */
     this.tail = null;
 
-    this.compare = new Comparator(comparatorFunction);
+    this.compare = new Comparator(comparatorFunction); // utility methods to use in the LinkedList class
   }
 
   /**
-   * @param {*} value
-   * @return {LinkedList}
+   * @param {*} value  // takes any value (*)
+   * @return {LinkedList} // returns a linked list object.
    */
   prepend(value) {
     // Make new node to be a head.
@@ -239,7 +239,9 @@ export default class LinkedList {
    * @return {string}
    */
   toString(callback) {
-    return this.toArray().map((node) => node.toString(callback)).toString();
+    return this.toArray()
+      .map((node) => node.toString(callback))
+      .toString();
   }
 
   /**

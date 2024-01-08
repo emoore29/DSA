@@ -172,3 +172,34 @@ O(n)
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
 - [YouTube](https://www.youtube.com/watch?v=njTh_OwMljA&index=2&t=1s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+
+head = {
+value: 12,
+next: 9
+// address in memory: 1098273
+}
+
+randomNode = {
+value: 12,
+next: 9
+// address in memory: 123490
+}
+
+n = obj
+signpost in front of obj that says "n"
+
+n = head // refers to the same object in memory as head
+// n and head both point to the same memory location, and any changes made to the object through one reference will be reflected in the other.
+
+n !== randomNode, but n === randomNode
+
+Lower level languages will give you access to the "address" or "id", but Javascript does that for us.
+
+Objects are passed by reference, so if n = Obj, we're not assigning a value to n, we're assigning a physical address (in RAM). That's why objects and arrays are mutated when we change them.
+Primitive types (numbers, strings, boolean, null, undefined) are passed by value, so writing n = 6, n is not a reference to a 6 in the memory. A copy of the value is created and assigned to the variable.
+
+if p = 6 // primitive type.
+and q = p // q contains whatever p contains right now, so q = 6. Then if p changes, q remains 6.
+We have two variables that equal six, but it's not the same 6. Q is not a reference to p at all.
+If then q = 7,
+p is still 6.
